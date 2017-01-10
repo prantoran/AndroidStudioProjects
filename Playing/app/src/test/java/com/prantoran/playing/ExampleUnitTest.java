@@ -1,4 +1,4 @@
-package com.prantoran.helloworld;
+package com.prantoran.playing;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.prantoran.helloworld;
+package com.prantoran.playing;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
