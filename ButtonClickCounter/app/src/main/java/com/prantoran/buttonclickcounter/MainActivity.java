@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private EditText userInput; //can store reference to an EditText widget
-    private Button button;
+    //private Button button;
     private TextView textView;
     private int numTimesClicked = 0;
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         userInput = (EditText)findViewById(R.id.editText);
-        button = (Button)findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
         textView = (TextView)findViewById(R.id.textView);
         textView.setText("");  //clear initial text before adding new text
 
@@ -41,10 +41,15 @@ public class MainActivity extends AppCompatActivity {
                     result  = "\n"+result;
                 }
                 textView.append(result);
+
+
+                String result2 = userInput.getText().toString(); //method chaining
+                result2 += "\n";
+                textView.append(result2);
             }
         };
-
-        button.setOnClickListener(ourOnClickListener);
-
+        if(button!=null) {
+            button.setOnClickListener(ourOnClickListener);
+        }
     }
 }
